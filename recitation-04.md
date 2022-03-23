@@ -1,6 +1,6 @@
 # CMPS 2200  Recitation 04
 
-**Name (Team Member 1):**_________________________  
+**Name (Team Member 1):** James Manzer  
 **Name (Team Member 2):**_________________________
 
 
@@ -37,6 +37,7 @@ To use this function to count words, you'll need to implement your own `map_f` a
 4. Assume that a word `w` appears `n` times. What is the **work** and **span** of `word_count_reduce` for this word, assuming a parallel implementation of the `reduce` function?
 
 **Enter answer here**
+Work is O(n), Span is O(logn)
 
 
 5. Why are we going through all this trouble? Couldn't I just use this function to count words?
@@ -53,7 +54,7 @@ for doc in docs:
 What is the problem that prevents us from easily parallelizing this solution?
 
 **Enter answer here**
-
+The count function is sequential, so there is no possibility for speedup as no part of the algorithm can be parallelized.
 
 ## Part 2: Sentiment analysis
 
@@ -64,3 +65,6 @@ Finally, we'll adapt our approach above to perform a simple type of sentiment an
 6. Complete the `sentiment_map` function to implement the above idea and test it with `test_sentiment_map`.
 
 7. Since the output here is similar to the word count problem, we will reuse `word_count_reduce` to compute the total number of positive and negative terms in a sequence of documents. Confirm your results work by running `test_sentiment`.
+
+
+**** I am not sure how to test my programs on replit. I have only been able to test one program succesfully, I believe in assignment 1? I think the code is right but I wish testing the code was more straightforward. There is no readme.md file here, but following those instructuions doesn't work anyways. I wish there were instructions that clearly stated how to correctly run the programs, as it is vital to me understanding if my code is correct!
